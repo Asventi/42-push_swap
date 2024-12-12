@@ -6,26 +6,32 @@
 /*   By: pjarnac <pjarnac@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 13:35:52 by pjarnac           #+#    #+#             */
-/*   Updated: 2024/12/06 16:23:04 by pjarnac          ###   ########.fr       */
+/*   Updated: 2024/12/12 14:21:51 by pjarnac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "operations.h"
 #include "stacks.h"
+#include "sort.h"
 #include <stdlib.h>
+#include <limits.h>
 
 int	main(int c, char **args)
 {
-	int			a[5] = {1, 2, 5, 7, 8};
-	int			b[5] = {2, 9, 4, 0, 0};
 	t_stacks	*stacks;
+	int			*tab;
 
-	stacks = malloc(sizeof (t_stacks));
-	stacks->a = a;
-	stacks->b = b;
-	stacks->a_size = 5;
-	stacks->b_size = 4;
-	rr(stacks);
-	sa(stacks);
-	print_stack(stacks);
+	if (c < 2)
+		exit(EXIT_SUCCESS);
+	stacks = create_stacks(args + 1, c - 1);
+	tab = create_idx_map(stacks);
+	if (!tab)
+	{
+		free_stacks(stacks);
+		exit_error();
+	}
+	free(stacks->a);
+	stacks->a = tab;
+	sort(stacks);
+	free_stacks(stacks);
 }

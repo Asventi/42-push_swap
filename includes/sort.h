@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stacks.h                                           :+:      :+:    :+:   */
+/*   sort.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pjarnac <pjarnac@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/06 14:11:36 by pjarnac           #+#    #+#             */
-/*   Updated: 2024/12/11 17:29:50 by pjarnac          ###   ########.fr       */
+/*   Created: 2024/12/10 15:49:51 by pjarnac           #+#    #+#             */
+/*   Updated: 2024/12/12 14:43:04 by pjarnac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STACKS_H
-# define STACKS_H
+#ifndef SORT_H
+# define SORT_H
 
-typedef struct s_stacks
-{
-	int	*a;
-	int	a_size;
-	int	*b;
-	int	b_size;
-	int	size;
-}			t_stacks;
+# include "stacks.h"
+# include <stdbool.h>
 
-void		print_stack(t_stacks *stacks);
-t_stacks	*create_stacks(char **nums, int size);
-void		free_stacks(t_stacks *stacks);
-void		exit_error(void);
-void	pb_num(t_stacks *stacks, int num);
-void	pa_num(t_stacks *stacks, int num);
+void	sort(t_stacks *stacks);
+
+int	*create_idx_map(t_stacks *stacks);
+int	get_idx(int	*tab, int size, int n);
+int	count_idx_under(t_stacks *stacks, int n);
+int	count_idx_over(t_stacks *stacks, int n);
 
 #endif

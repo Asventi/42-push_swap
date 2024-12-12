@@ -6,7 +6,7 @@
 #    By: pjarnac <pjarnac@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 11:53:22 by pjarnac           #+#    #+#              #
-#    Updated: 2024/12/06 15:41:28 by pjarnac          ###   ########.fr        #
+#    Updated: 2024/12/12 14:22:12 by pjarnac          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,14 @@ DEPS			=	$(patsubst %.c, $(BUILD_DIR)%.d, $(SRC))
 
 SRC 		=	push_swap.c \
 
+# ===============SORTING=============== #
+
+SRC += $(addprefix $(SORTING_DIR), $(SORTING_SRC))
+
+SORTING_DIR =		sorting/
+SORTING_SRC =		sort.c \
+					indexes.c \
+
 # =============OPERATIONS============== #
 
 SRC += $(addprefix $(OPERATIONS_DIR), $(OPERATIONS_SRC))
@@ -36,6 +44,7 @@ OPERATIONS_DIR =	operations/
 OPERATIONS_SRC =	s.c \
 					p.c \
 					r.c \
+					rr.c \
 
 # ===============STACKS================ #
 
