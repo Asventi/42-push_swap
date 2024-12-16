@@ -6,7 +6,7 @@
 #    By: pjarnac <pjarnac@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/19 11:53:22 by pjarnac           #+#    #+#              #
-#    Updated: 2024/12/12 14:22:12 by pjarnac          ###   ########.fr        #
+#    Updated: 2024/12/16 11:32:29 by pjarnac          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC += $(addprefix $(SORTING_DIR), $(SORTING_SRC))
 SORTING_DIR =		sorting/
 SORTING_SRC =		sort.c \
 					indexes.c \
+					sort_utils.c \
 
 # =============OPERATIONS============== #
 
