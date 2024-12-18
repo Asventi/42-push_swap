@@ -6,7 +6,7 @@
 /*   By: pjarnac <pjarnac@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 15:15:55 by pjarnac           #+#    #+#             */
-/*   Updated: 2024/12/11 17:29:36 by pjarnac          ###   ########.fr       */
+/*   Updated: 2024/12/18 14:54:46 by pjarnac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,6 @@ void	free_stacks(t_stacks *stacks)
 
 void	exit_error(void)
 {
-	write(2, "Error\n", 6);
+	ft_putstr_fd("Error\n", 2);
 	exit(EXIT_FAILURE);
 }

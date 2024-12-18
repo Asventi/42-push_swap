@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "stacks.h"
-#include "libft.h"
 #include <stdlib.h>
 #include <limits.h>
 #include <stdbool.h>

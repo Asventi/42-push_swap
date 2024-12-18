@@ -6,7 +6,7 @@
 /*   By: pjarnac <pjarnac@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:49:51 by pjarnac           #+#    #+#             */
-/*   Updated: 2024/12/16 10:25:36 by pjarnac          ###   ########.fr       */
+/*   Updated: 2024/12/18 11:01:41 by pjarnac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int		count_idx_under(t_stacks *stacks, int n);
 int		count_idx_over(t_stacks *stacks, int n);
 int		abs(int n);
 void	presort(t_stacks *stacks, int divider);
+bool	is_sort(int	*tab, int size);
 
 #endif

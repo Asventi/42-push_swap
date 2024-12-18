@@ -6,15 +6,13 @@
 /*   By: pjarnac <pjarnac@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 13:35:52 by pjarnac           #+#    #+#             */
-/*   Updated: 2024/12/16 13:46:25 by pjarnac          ###   ########.fr       */
+/*   Updated: 2024/12/18 14:55:37 by pjarnac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "operations.h"
 #include "stacks.h"
 #include "sort.h"
 #include <stdlib.h>
-#include <limits.h>
 
 int	main(int c, char **args)
 {
